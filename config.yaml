@@ -1,0 +1,7 @@
+path: E:\Development\DatasetPreparation
+train: images
+val: images
+
+names:
+  0: package
+  1: cloud

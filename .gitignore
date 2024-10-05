@@ -1,0 +1,7 @@
+vscode/
+images/
+labels/
+runs/
+labels.cache/
+test.jpg/
+yolo11n.pt/
