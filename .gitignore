@@ -1,7 +1,11 @@
-vscode/
+.vscode/
 images/
 labels/
 runs/
-labels.cache/
-test.jpg/
-yolo11n.pt/
+__pycache__/
+
+
+labels.cache
+test.jpg
+yolo11n.pt
+best.pt

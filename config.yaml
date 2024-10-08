@@ -1,4 +1,6 @@
-path: E:\Development\DatasetPreparation
+# TO BE EDITED path and names
+
+path: E:\Development\YOLOWorkflow
 train: images
 val: images
 

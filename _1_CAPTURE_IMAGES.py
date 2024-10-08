@@ -1,7 +1,6 @@
 import time
 import os
-import win32gui, win32ui, win32con, win32api
-from datetime import datetime
+import win32gui, win32ui, win32con
 import argparse
 import numpy as np
 from PIL import Image
@@ -9,15 +8,13 @@ import ctypes
 from screeninfo import get_monitors
 
 # Captures the gameplay within a window and saves the screenshots in a "data/images".
-# If window title is -1, captures the entire screen.
 
 # Required
-WINDOW_TITLE = "-1"
-
-# Not Required
+WINDOW_TITLE = "-1" # Set -1 for full screen capture, or window title for specific window capture.
 FREQUENCY = 1
 CHANNELS = 3 # 3=jpg, 4=png
 MAX = 2**63-1
+
 
 class WindowCapture:
     def __init__(self, window_title):
@@ -37,7 +34,7 @@ class WindowCapture:
             self.width = window_rect[2] - window_rect[0]
             self.height = window_rect[3] - window_rect[1]
 
-        print(f"Capturing {self.width}x{self.height}")
+        print(f"Capturing window with dimensions {self.width}x{self.height}.")
        
     def capture_screenshot(self):
         # Get the window device context
@@ -127,7 +124,7 @@ if __name__ == "__main__":
     time_elapsed = 0.0
     current_time = time.time()
 
-    print("Capturing...")
+    print("Collecting images...")
     while captures_count < MAX:
         delta_time = time.time() - current_time
 
